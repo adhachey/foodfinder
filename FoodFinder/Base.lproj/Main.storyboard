@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="lHR-Hj-boj">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_bg" id="GhN-fG-VR9">
+                                <rect key="frame" x="0.0" y="15" width="320" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="header" id="5JK-Tc-hc5">
+                                <rect key="frame" x="-27" y="0.0" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xUT-Xp-tek" customClass="headerFav">
+                                <rect key="frame" x="0.0" y="21" width="47" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="restart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LGp-io-y9w">
+                                <rect key="frame" x="273" y="28" width="47" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="fav_header_off"/>
+                                <connections>
+                                    <action selector="headerFav:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9t-lt-BXx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="t9R-ny-Oe2">
+                                <rect key="frame" x="20" y="213" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="184" sectionHeaderHeight="28" sectionFooterHeight="28" id="PQ5-aI-rc7">
+                                <rect key="frame" x="0.0" y="236" width="320" height="332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="184" id="Gz7-m6-enG" customClass="recipeTableViewCell" customModule="FoodFinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="184"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gz7-m6-enG" id="yV8-Uv-X5b">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="183.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipecover" id="4v1-sU-Imd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the recipe name and it can go on two lines" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rkz-y2-Y3g">
+                                                    <rect key="frame" x="13" y="88" width="289" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the data source name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="T4b-V6-P1t">
+                                                    <rect key="frame" x="13" y="148" width="276" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wj9-mZ-9eT">
+                                                    <rect key="frame" x="283" y="13" width="29" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="fav_off"/>
+                                                    <state key="selected" image="fav_on"/>
+                                                    <connections>
+                                                        <action selector="recipeFav:" destination="Gz7-m6-enG" eventType="touchUpInside" id="gqH-f2-x4M"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vRc-Ux-XPu">
+                                                    <rect key="frame" x="0.0" y="-1" width="320" height="183.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="openWebVIew:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dfq-3g-PJ5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeSource" destination="T4b-V6-P1t" id="QOd-zd-vC2"/>
+                                            <outlet property="recipeTitle" destination="Rkz-y2-Y3g" id="bul-qn-5fY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9G7-hC-uh4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="OTm-pF-ecz"/>
+                                </connections>
+                            </tableView>
+                            <view opaque="NO" contentMode="scaleToFill" id="2Tj-vx-o4a">
+                                <rect key="frame" x="0.0" y="51" width="320" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="no" id="qx4-lr-et5">
+                                        <rect key="frame" x="340" y="60" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="yes" id="9Ds-I3-Mn4">
+                                        <rect key="frame" x="-70" y="60" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card" id="094-uZ-VI0">
+                                        <rect key="frame" x="18" y="26" width="284" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3zx-jK-ijg">
+                                        <rect key="frame" x="18" y="64" width="284" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="card" id="07f-zn-zvh">
+                                        <rect key="frame" x="18" y="26" width="284" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4jx-om-ctH" appends="YES" id="c51-V2-TsI"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n5p-hB-Yek"/>
+                    <connections>
+                        <outlet property="dynamicCounter" destination="t9R-ny-Oe2" id="ori-9v-qQD"/>
+                        <outlet property="homeTableView" destination="PQ5-aI-rc7" id="nmF-2O-t0G"/>
+                        <outlet property="myCard" destination="094-uZ-VI0" id="Eab-zW-nYl"/>
+                        <outlet property="myCardBorder" destination="07f-zn-zvh" id="l0N-M7-wqu"/>
+                        <outlet property="myLabel" destination="3zx-jK-ijg" id="gHj-d2-ttS"/>
+                        <outlet property="myNo" destination="qx4-lr-et5" id="FWL-Ak-JTw"/>
+                        <outlet property="myTrayView" destination="2Tj-vx-o4a" id="hNf-Vs-MNY"/>
+                        <outlet property="myYes" destination="9Ds-I3-Mn4" id="n2M-Zr-hvN"/>
+                        <segue destination="by7-Yb-N4b" kind="push" identifier="favorites" id="RRM-bT-nha"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="4jx-om-ctH">
+                    <connections>
+                        <action selector="didPanTray:" destination="BYZ-38-t0r" id="RZ5-mA-CYi"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1183" y="368"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="9gh-d3-QMW">
+            <objects>
+                <viewController id="by7-Yb-N4b" customClass="favoritesViewController" customModule="FoodFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VVn-YA-Pgz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="favorites" id="BXm-FD-KCL">
+                                <rect key="frame" x="-27" y="0.0" width="375" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="184" sectionHeaderHeight="28" sectionFooterHeight="28" id="d4G-BT-xYH">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="favrecipeCell" rowHeight="184" id="34H-L4-7Dq" customClass="favrecipeTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="184"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="34H-L4-7Dq" id="96D-rr-e2j">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="183.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipecover" id="xXw-fQ-fSN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the recipe name and it can go on two lines" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g7j-Q3-lIg">
+                                                    <rect key="frame" x="13" y="88" width="289" height="58"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the data source name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Egx-1C-NJB">
+                                                    <rect key="frame" x="13" y="148" width="276" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8g5-3G-fDH">
+                                                    <rect key="frame" x="283" y="13" width="29" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="fav_off"/>
+                                                    <state key="selected" image="fav_on"/>
+                                                    <connections>
+                                                        <action selector="recipeFav:" destination="34H-L4-7Dq" eventType="touchUpInside" id="Wss-e3-tsV"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ig6-M9-8lJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="183.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="openWebVIew:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBA-r0-5CC"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favRecipeSource" destination="Egx-1C-NJB" id="Lox-FY-Dik"/>
+                                            <outlet property="favRecipeTitle" destination="g7j-Q3-lIg" id="MKS-dK-Inq"/>
+                                            <outlet property="recipeSource" destination="Egx-1C-NJB" id="VsQ-0H-sNl"/>
+                                            <outlet property="recipeTitle" destination="g7j-Q3-lIg" id="GeG-qa-nA0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="l9N-zl-M5J"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5iG-KG-Pj3"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x02-ji-jGr">
+                                <rect key="frame" x="273" y="28" width="47" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="fav_on"/>
+                                <connections>
+                                    <action selector="backtomain:" destination="by7-Yb-N4b" eventType="touchUpInside" id="w7q-Ao-ICr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8fO-fg-d7o"/>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="d4G-BT-xYH" id="MbB-3d-rjg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPO-BF-ufY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1587" y="368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zkc-pa-Y8N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lHR-Hj-boj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hs7-01-ZCM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rN2-oU-jmI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weQ-6D-Ri9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card" width="284" height="120"/>
+        <image name="card_bg" width="375" height="257"/>
+        <image name="fav_header_off" width="29" height="24"/>
+        <image name="fav_off" width="29" height="24"/>
+        <image name="fav_on" width="29" height="24"/>
+        <image name="favorites" width="375" height="64"/>
+        <image name="header" width="375" height="64"/>
+        <image name="no" width="50" height="50"/>
+        <image name="recipecover" width="375" height="200"/>
+        <image name="restart" width="28" height="28"/>
+        <image name="yes" width="50" height="50"/>
+    </resources>
+</document>
